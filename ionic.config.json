@@ -1,0 +1,8 @@
+{
+  "name": "Order9066",
+  "app_id": "bd354351",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
