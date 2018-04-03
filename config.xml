@@ -88,4 +88,7 @@
     </plugin>
     <engine name="ios" spec="~4.5.4" />
     <engine name="android" spec="~7.0.0" />
+    <plugin name="cordova-plugin-play-games-services" spec="^1.1.0">
+        <variable name="APP_ID" value="768177729199" />
+    </plugin>
 </widget>
