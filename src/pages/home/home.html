@@ -3,34 +3,44 @@
   <ion-grid>
     <ion-row>
       <ion-col col-4 text-center>
-        <div class="rounded-border" (click)="goToOtherPage()">
+        <div tappable class="icon-container" (click)="goToPage('SettingsPage')">
           <ion-icon name="settings"></ion-icon>
           <p>Settings</p>
         </div>
       </ion-col>
       <ion-col col-4 text-center>
-        <ion-icon name="images"></ion-icon>
-        <p>Gallery</p>
+        <div tappable class="icon-container" (click)="goToPage('GalleryPage')">
+          <ion-icon name="images"></ion-icon>
+          <p>Gallery</p>
+        </div>
       </ion-col>
       <ion-col col-4 text-center>
-        <ion-icon name="list-box"></ion-icon>
-        <p>Tasks</p>
+        <div tappable class="icon-container" (click)="goToPage('TasksPage')">
+          <ion-icon name="list-box"></ion-icon>
+          <p>Tasks</p>
+        </div>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col col-4 push-4 text-center>
-        <ion-icon name="globe"></ion-icon>
-        <p>Browser</p>
+        <div tappable class="icon-container" (click)="goToPage('BrowserPage')">
+          <ion-icon name="globe"></ion-icon>
+          <p>Browser</p>
+        </div>
       </ion-col>
     </ion-row>
-    <ion-row>
+    <ion-row class="bottom-row">
       <ion-col col-4 push-2 text-center>
-        <ion-icon name="call"></ion-icon>
-        <p>Phone</p>
+        <div tappable class="icon-container" (click)="goToPage('PhonePage')">
+          <ion-icon name="call"></ion-icon>
+          <p>Phone</p>
+        </div>
       </ion-col>
       <ion-col col-4 push-2 text-center>
-        <ion-icon name="text"></ion-icon>
-        <p>Messages</p>
+        <div tappable class="icon-container" (click)="goToPage('MessagesPage')">
+          <ion-icon name="text"></ion-icon>
+          <p>Messages</p>
+        </div>
       </ion-col>
     </ion-row>
   </ion-grid>

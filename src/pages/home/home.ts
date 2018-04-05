@@ -1,38 +1,63 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-import { SettingsPage } from '../settings/settings';
-
 import { AlertController } from 'ionic-angular';
 
-@Component({
+import { SettingsPage } from '../settings/settings';
+import { BrowserPage } from '../browser/browser';
+import { GalleryPage } from '../gallery/gallery';
+import { MessagesPage } from '../messages/messages';
+import { PhonePage } from '../phone/phone';
+import { TasksPage } from '../tasks/tasks';
+
+@Component ({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 
 export class HomePage {
 
-  constructor(
+  constructor (
     public navCtrl: NavController,
     public alertCtrl: AlertController
   ) {}
 
-  goToOtherPage () {
+  goToPage ( targetPage : String ) {
     //push another page onto the history stack
     //causing the nav controller to animate the new page in
 
-    /*
-    let alert = this.alertCtrl.create({
-          title: 'New Friend!',
-          subTitle: 'Your friend, Obi wan Kenobi, just accepted your friend request!',
-          buttons: ['OK']
-        });
-        alert.present();
-        */
+    console.log( 'targetPage: ' + targetPage );
 
-
-    this.navCtrl.push(SettingsPage);
+    switch( targetPage ) {
+      case 'SettingsPage': {
+        this.navCtrl.push( SettingsPage );
+        break;
+      }
+      case 'BrowserPage': {
+        this.navCtrl.push( BrowserPage );
+        break;
+      }
+      case 'GalleryPage': {
+        this.navCtrl.push( GalleryPage );
+        break;
+      }
+      case 'MessagesPage': {
+        this.navCtrl.push( MessagesPage );
+        break;
+      }
+      case 'PhonePage': {
+        this.navCtrl.push( PhonePage );
+        break;
+      }
+      case 'TasksPage': {
+        this.navCtrl.push( TasksPage );
+        break;
+      }
+      default: {
+        // nothing
+      break;
+      }
+    }
 
   }
-
 }
