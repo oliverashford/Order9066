@@ -3,6 +3,8 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { Badge } from '@ionic-native/badge';                                // The essential purpose of badge numbers is to enable an application to inform its users that it has something for them — for example, unread messages — when the application isn’t running in the foreground - https://ionicframework.com/docs/native/badge/
+
 
 import { MyApp } from './app.component';
 
@@ -43,6 +45,7 @@ import { TasksPage } from '../pages/tasks/tasks';
   providers: [
     StatusBar,
     SplashScreen,
+    Badge,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
