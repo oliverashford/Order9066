@@ -2,7 +2,8 @@ page-home {
 
   ion-content {
 
-    background: transparent url("../assets/imgs/wallpaper.jpg") no-repeat !important;
+    background: transparent url("../assets/imgs/home-background.jpg") no-repeat !important;
+    background-size: cover !important;
 
     .icon-container {
       color: #fff;
